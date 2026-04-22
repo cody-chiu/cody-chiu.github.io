@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="white" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cody Chiu Portfolio</title>
+    <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script> -->
+    <link href="./output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="selection:bg-primary-container selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-8 py-4 max-w-full font-headline tracking-tight shadow-lg">
+        <div class="text-xl font-bold tracking-tighter text-primary cursor-pointer">
+            <a href="#">Cody.Chiu</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-gray-400 hover transition-colors" href="#about">About</a>
+            <a class="text-gray-400 hover transition-colors" href="#about">Experience</a>
+            <a class="text-gray-400 hover transition-colors" href="#stack">Stack</a>
+            <a class="text-gray-400 hover transition-colors" href="#portfolio">Portfolio</a>
+        </div>
+        <button
+            class="primary-cta-gradient text-white px-6 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform duration-300"
+            onclick="window.location.href='mailto:lililala7766@gmail.com'">
+            Contact
+        </button>
+    </nav>
+    <main>
+        <!-- Section 1: Hero -->
+        <section
+            class="min-h-screen flex flex-col justify-center py-32 px-8 md:px-24 relative overflow-hidden bg-surface">
+            <div
+                class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full blur-[120px] bg-primary/5 opacity-30">
+            </div>
+            <div
+                class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full blur-[100px] bg-primary-container/5 opacity-20">
+            </div>
+            <div class="relative z-10 max-w-max">
+                <div
+                    class="fade-up font-mono text-primary tracking-[0.2em] uppercase text-sm mb-6 flex items-center gap-3">
+                    <span class="w-8 h-[1px] bg-primary"></span>
+                    OPEN TO NEW OPPORTUNITIES
+                </div>
+                <h1
+                    class="delay-100 fade-up font-headline font-bold text-7xl md:text-[9rem] leading-[0.9] tracking-tighter mb-8">
+                    <span class="designer-vertical-gradient">Designer</span> <br />
+                    <span class="text-gray-500">& Coder</span>
+                </h1>
+                <p
+                    class="delay-[250ms] fade-up font-body text-xl md:text-2xl text-secondary max-w-2xl leading-relaxed opacity-80">
+                    UI/UX Designer with 10+ years of experience specializing in game interfaces and interactive web
+                    products. Strong focus on user flow optimization, visual clarity, and high-conversion campaign
+                    design.
+                </p>
+                <div class="delay-[400ms] fade-up mt-12 flex flex-wrap gap-6">
+                    <a class="primary-cta-gradient text-on-primary px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-transform"
+                        href="portfolio.html">
+                        View Portfolio <span class="material-symbols-outlined">arrow_outward</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Abstract Visual -->
+            <div class="delay-500 fade-in-only hidden lg:block absolute right-3 top-1/2 -translate-y-1/2 w-1/2 aspect-square">
+                <div class="w-full h-full relative group">
+                    <img class="w-full h-full object-cover" src="./img/sketch.jpg">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out
+                                [clip-path:inset(0%_0%_100%_0%_round_40px)] group-hover:[clip-path:inset(0_0_0%_0%_round_40px)]"
+                        src="./img/sketch-color.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: About & Experience -->
+        <section class="py-32 px-8 md:px-24 bg-surface-container-low" id="about">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5">
+                    <h2 class="fade-up font-headline text-5xl font-bold mb-8 text-primary">Cody Chiu</h2>
+                    <div class="space-y-6 text-lg text-secondary leading-relaxed">
+                        <p class="delay-100 fade-up">
+                            With over a decade of experience, I bridge the gap between creative vision and technical
+                            execution. My journey began at the intersection of game design and front-end development,
+                            where I learned that the best interfaces are those that disappear into the experience.
+                        </p>
+                        <p class="delay-200 fade-up">
+                            I specialize in crafting complex game interfaces and interactive web products that
+                            prioritize user agency and cinematic flow. My process is rooted in "Digital Curation"—every
+                            pixel and every line of code serves a purpose.
+                        </p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-2 gap-8">
+                        <div>
+                            <div
+                                class="delay-[350ms] stat-num text-5xl font-headline font-bold text-primary-container inline-block">
+                                10+</div>
+                            <div class="font-mono text-xs uppercase tracking-widest text-outline">Years of Exp</div>
+                        </div>
+                        <div>
+                            <div
+                                class="delay-500 stat-num text-5xl font-headline font-bold text-primary-container inline-block">
+                                50+</div>
+                            <div class="font-mono text-xs uppercase tracking-widest text-outline">Shipped Products</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 relative" id="experience">
+                    <h3 class="delay-100 fade-up font-mono text-sm uppercase tracking-widest text-outline mb-12">
+                        Professional Timeline</h3>
+                    <div class="space-y-12 relative">
+                        <div class="absolute left-[7px] top-2 bottom-2 w-[2px] overflow-hidden bg-outline/20">
+                            <div class="timeline-line w-full timeline-trace"></div>
+                        </div>
+                        <!-- Role 1 -->
+                        <div class="relative pl-12">
+                            <div
+                                class="delay-300 tl-dot absolute left-0 top-1.5 w-4 h-4 rounded-full bg-primary-container">
+                            </div>
+                            <div class="delay-[400ms] tl-item">
+                                <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                                    <h4 class="text-xl font-bold text-primary-container">UI/UX Designer</h4>
+                                    <span class="font-mono text-sm text-primary-container">2020 — PRESENT</span>
+                                </div>
+                                <p class="mb-4 font-semibold">Xuenn Private Limited</p>
+                                <ul class="list-disc ml-4 space-y-2">
+                                    <li>Designed game UI layouts, wireframes, and prototypes to support development.
+                                    </li>
+                                    <li>Improved user engagement through optimized UI layouts and led responsive UI
+                                        implementation.</li>
+                                    <li>Created promotional materials, including banners, animations, and game visuals,
+                                        to boost engagement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Role 2 -->
+                        <div class="relative pl-12">
+                            <div class="delay-[600ms] tl-dot absolute left-1 top-2 w-2 h-2 rounded-full bg-primary">
+                            </div>
+                            <div class="delay-700 tl-item">
+                                <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                                    <h4 class="text-xl font-bold text-primary">Senior Designer</h4>
+                                    <span class="font-mono text-sm text-outline">2011 — 2020</span>
+                                </div>
+                                <p class="font-semibold mb-4">Summit Design Studio</p>
+                                <ul class="list-disc ml-4 space-y-2">
+                                    <li>Presented proposals to clients and managed communication throughout the project
+                                        lifecycle</li>
+                                    <li>Delivered marketing design solutions based on client needs, including product
+                                        videos, visual design, and web design to support campaigns and brand exposure
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Role 3 -->
+                        <div class="relative pl-12">
+                            <div class="delay-[900ms] tl-dot absolute left-1 top-2 w-2 h-2 rounded-full bg-primary">
+                            </div>
+                            <div class="delay-1000 tl-item">
+                                <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
+                                    <h4 class="text-xl font-bold text-primary">Web Designer</h4>
+                                    <span class="font-mono text-sm text-outline">2007 — 2011</span>
+                                </div>
+                                <p class="font-semibold mb-4">Rommi Technology Co.</p>
+                                <ul class="list-disc ml-4 space-y-2">
+                                    <li>Designed game UI layouts, wireframes, and prototypes to support development.
+                                    </li>
+                                    <li>Designed and developed co-branded campaign pages for partnership promotions</li>
+                                    <li>Created game visual concepts and art compositions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Tools & Skills -->
+        <section class="py-32 px-8 md:px-24 bg-surface" id="stack">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="fade-up font-headline text-5xl font-bold mb-6 text-gray-500">Mastered <span
+                        class="hero-gradient-text">Stack</span></h2>
+                <p class="delay-100 fade-up text-secondary text-lg">The tools and technologies I use to bring digital
+                    dreams to reality.</p>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 border border-outline-variant/10">
+                    <div
+                        class="fade-up p-12 bg-white flex flex-col items-center justify-center group transition-colors border-r border-b border-outline-variant/10 delay-100">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">token</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">Figma</span>
+                    </div>
+                    <div
+                        class="delay-200 fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors border-r border-b border-outline-variant/10">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">brush</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">Photoshop</span>
+                    </div>
+                    <div
+                        class="delay-300 fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors border-r border-b border-outline-variant/10">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">polyline</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">Illustrator</span>
+                    </div>
+                    <div
+                        class="delay-[400ms] fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors border-b border-outline-variant/10">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">movie</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">Premiere</span>
+                    </div>
+                    <div class="delay-500 fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors border-r border-outline-variant/10">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">auto_awesome</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">After Effects</span>
+                    </div>
+                    <div
+                        class="delay-[600ms] fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors border-r border-outline-variant/10">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">code</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">HTML/CSS</span>
+                    </div>
+                    <div
+                        class="delay-700 fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors border-r border-outline-variant/10">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">grid_view</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">Tailwind CSS</span>
+                    </div>
+                    <div
+                        class="delay-[800ms] fade-up p-12 bg-white flex flex-col items-center justify-center group -bright transition-colors">
+                        <div
+                            class="w-12 h-12 mb-4 flex items-center justify-center text-primary-container group-hover:scale-125 transition-transform">
+                            <span class="material-symbols-outlined text-4xl" data-weight="fill">view_in_ar</span>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">Strata 3D</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 4: Portfolio Grid -->
+        <section class="py-32 px-8 md:px-24 bg-surface-container-low" id="portfolio">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div>
+                    <h2 class="fade-up font-headline text-6xl font-bold tracking-tighter mb-4">My <span
+                            class="hero-gradient-text">Portfolio</span></h2>
+                    <p class="delay-100 fade-up font-mono text-sm uppercase tracking-widest text-outline">A curation of
+                        digital and physical design</p>
+                </div>
+                <div class="delay-200 fade-up flex gap-4">
+                    <button
+                        class="w-12 h-12 rounded-full ghost-border text-primary flex items-center justify-center hover:scale-[1.2] transition-all"
+                        onclick="window.location.href='./portfolio.html'">
+                        <span class="material-symbols-outlined">east</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-8">
+                <div class="delay-100 fade-up group bg-surface-container rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                    onclick="window.location.href='portfolio.html'">
+                    <div class="aspect-[3/2] 2xl:aspect-square overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="./img/scratch.png" />
+                        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="2xl:hidden font-mono text-xs text-primary uppercase tracking-widest mb-2 block">Scratch
+                            off</span>
+                        <h3 class="text-2xl font-bold text-gray-500">Interactive Games</h3>
+                        <p class="text-sm text-outline leading-relaxed">Game interface design focused on intuitive UI/UX
+                            and user flow</p>
+                    </div>
+                </div>
+                <div class="delay-200 fade-up group bg-surface-container rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                    onclick="window.location.href='portfolio.html#lottery-game-design'">
+                    <div class="aspect-[3/2] 2xl:aspect-square overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="./img/gameui.png" />
+                        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="2xl:hidden font-mono text-xs text-primary uppercase tracking-widest mb-2 block">Lottery
+                            game</span>
+                        <h3 class="text-2xl font-bold text-gray-500">Game UI</h3>
+                        <p class="text-sm text-outline leading-relaxed">Professional game design showcasing innovative
+                            UI/UX solutions</p>
+                    </div>
+                </div>
+                <div class="delay-300 fade-up group bg-surface-container rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                    onclick="window.location.href='portfolio.html#pet-e-commerce'">
+                    <div class="aspect-[3/2] 2xl:aspect-square overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="./img/web.png" />
+                        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="2xl:hidden font-mono text-xs text-primary uppercase tracking-widest mb-2 block">pet
+                            e-commerce</span>
+                        <h3 class="text-2xl font-bold text-gray-500">Web Design</h3>
+                        <p class="text-sm text-outline leading-relaxed">Commercial website with integrated e-commerce
+                            platform</p>
+                    </div>
+                </div>
+                <div class="delay-[400ms] fade-up group bg-surface-container rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                    onclick="window.location.href='portfolio.html#video-production'">
+                    <div class="aspect-[3/2] 2xl:aspect-square overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="img/video.jpg" />
+                        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="2xl:hidden font-mono text-xs text-primary uppercase tracking-widest mb-2 block">Product
+                            Video</span>
+                        <h3 class="text-2xl font-bold text-gray-500">Video Production</h3>
+                        <p class="text-sm text-outline leading-relaxed">Product and commercial video storytelling</p>
+                    </div>
+                </div>
+                <div class="delay-500 fade-up group bg-surface-container rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                    onclick="window.location.href='portfolio.html#exhibition-design'">
+                    <div class="aspect-[3/2] 2xl:aspect-square overflow-hidden relative">
+                        <img class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" src="img/exhibition.jpg" />
+                        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="2xl:hidden font-mono text-xs text-primary uppercase tracking-widest mb-2 block">poster
+                            Design</span>
+                        <h3 class="text-2xl font-bold text-gray-500">Exhibition Design</h3>
+                        <p class="text-sm text-outline leading-relaxed">Trade show and exhibition visual design</p>
+                    </div>
+                </div>
+                <div class="delay-[600ms] fade-up group bg-surface-container rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(0,0,0,0.1)]"
+                    onclick="window.location.href='portfolio.html#print-design'">
+                    <div class="aspect-[3/2] 2xl:aspect-square overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="img/print.jpg" />
+                        <div class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="2xl:hidden font-mono text-xs text-primary uppercase tracking-widest mb-2 block">DM & other Design</span>
+                        <h3 class="text-2xl font-bold text-gray-500">Print Design</h3>
+                        <p class="text-sm text-outline leading-relaxed">Marketing materials and print collateral</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer
+        class="bg-surface flex flex-col md:flex-row justify-between items-center p-8 w-full border-t border-gray-500/15 font-body text-sm uppercase tracking-widest">
+        <div class="text-gray-500 mb-8 md:mb-0">© 2026 by Cody</div>
+        <div class="flex gap-8">
+            <a class="text-gray-500 hover underline-offset-4 transition-all duration-200"
+                href="mailto:lililala7766@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <script>
+
+        // Universal scroll animation — triggers fade-up, stat-num, timeline elements per section
+        function animateSection(section) {
+            // fade-in-only
+            section.querySelectorAll('.fade-up, .fade-in-only').forEach(el => el.classList.add('visible'));
+            // fade-up: all direct .fade-up inside this section
+            section.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+
+            // stat-num: scale bounce
+            section.querySelectorAll('.stat-num').forEach(el => el.classList.add('visible'));
+
+            // Timeline specific
+            const line = section.querySelector('.timeline-line');
+            if (line) setTimeout(() => line.classList.add('visible'), 600);
+
+            section.querySelectorAll('.tl-dot').forEach((dot, i) =>
+                setTimeout(() => dot.classList.add('visible'), 900 + i * 300));
+            section.querySelectorAll('.tl-item').forEach((item, i) =>
+                setTimeout(() => item.classList.add('visible'), 1000 + i * 300));
+        }
+
+        // Hero section — trigger immediately on load
+        const heroSection = document.querySelector('main > section:first-child');
+        setTimeout(() => animateSection(heroSection), 100);
+
+        // All other sections — trigger on scroll
+        const scrollSections = document.querySelectorAll('main > section:not(:first-child), main > section[id]');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSection(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        scrollSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>
