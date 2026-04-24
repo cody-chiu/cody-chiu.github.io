@@ -2,16 +2,15 @@
   "name": "portfolio-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "tailwindcss -i ./style.css -o ./output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "tailwindcss": "^3.4.1",
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/container-queries": "^0.1.1"
+  "dependencies": {
+    "@tailwindcss/cli": "4.0.0-alpha.25",
+    "tailwindcss": "4.0.0-alpha.25"
   }
 }

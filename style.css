@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "./*.html";
+@source "./main.js";
 
 /* style.css */
 html {
@@ -112,6 +113,10 @@ html {
     border-color: var(--color-primary);
 }
 
+.white .border-primary-container {
+    border-color: var(--color-primary-container);
+}
+
 .white .bg-surface-container-high {
     background-color: var(--color-surface-container-high);
 }
@@ -136,7 +141,10 @@ html {
 
 /* Material Symbols Outlined */
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0;
+    font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0;
+    font-size: inherit !important;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* General Body Styles */
@@ -212,7 +220,8 @@ body {
 /* Animation */
 .fade-in-only {
     opacity: 0;
-    transition: opacity 1s ease-out; /* 持續時間可自行調整 */
+    transition: opacity 1s ease-out;
+    /* 持續時間可自行調整 */
 }
 
 .fade-in-only.visible {
@@ -270,4 +279,73 @@ body {
 .tl-item.visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* 確保 mobile-menu 顯示時的樣式包含 opacity-100 */
+#mobile-menu.open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    /* transform: translateY(0) !important; */
+}
+
+/* 漢堡變叉叉的動畫 */
+#menu-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* 導覽連結容器，確保相對於它定位 */
+.nav-link,
+.nav-active {
+    position: relative;
+    display: inline-flex;
+    /* 關鍵：讓容器高度與文字精確對齊 */
+    align-items: center;
+    /* 輔助垂直對齊 */
+    line-height: 1rem;
+}
+
+/* 製作小圓點：預設隱藏且縮小 */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -8px;
+    transform: translateY(-50%) scale(0);
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    /* 顏色跟隨文字 */
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 當 nav-link 亮起時顯示圓點並放大 */
+.nav-link.text-primary::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* 製作小圓點：預設隱藏且縮小 */
+.nav-active:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -8px;
+    transform: translateX(-50%) scale(1);
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    /* 顏色跟隨文字 */
+    border-radius: 50%;
+    opacity: 1;
 }

@@ -13,40 +13,89 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <script src="main.js" defer></script>
 </head>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
     <nav
-        class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-8 py-4 max-w-full font-headline tracking-tight shadow-lg">
-        <div class="text-xl font-bold tracking-tighter text-primary font-headline">
-            <a href="./index.html" class="group flex items-center">
-                <span
-                    class="material-symbols-outlined max-w-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-w-[40px] group-hover:opacity-100 group-hover:mr-2">west</span>
-                <span>Cody.Chiu</span>
-            </a>
-        </div>
-        <div class="hidden md:flex items-center gap-10">
-            <a class="text-gray-500 hover transition-colors font-headline tracking-tight"
-                href="#interactive-games">Games</a>
-            <a class="text-gray-500 hover transition-colors font-headline tracking-tight"
-                href="#lottery-game-design">UI</a>
-            <a class="text-gray-500 hover transition-colors font-headline tracking-tight" href="#pet-e-commerce">Web</a>
-            <a class="text-gray-500 hover transition-colors font-headline tracking-tight"
-                href="#video-production">Video</a>
-            <a class="text-gray-500 hover transition-colors font-headline tracking-tight"
-                href="#exhibition-design">Exhibition</a>
-            <a class="text-gray-500 hover transition-colors font-headline tracking-tight" href="#print-design">Print</a>
-        </div>
-        <button
-            class="primary-cta-gradient text-white px-6 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform duration-300"
-            onclick="window.location.href='mailto:lililala7766@gmail.com'">
-            Contact
+        class="fixed top-0 w-full z-80 glass-nav flex justify-between items-center p-4 lg:px-6 max-w-full font-headline tracking-tight shadow-lg">
+        <button id="menu-btn"
+            class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-[70] relative">
+            <span class="w-6 h-0.5 bg-primary transition-all duration-300 origin-center"></span>
+            <span class="w-6 h-0.5 bg-primary transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-primary transition-all duration-300 origin-center"></span>
         </button>
+        <div class="flex items-center gap-4">
+            <div class="text-xl font-bold tracking-tighter text-primary font-headline">
+                <a href="./index.html" class="hidden md:flex group items-center">
+                    <span
+                        class="material-symbols-outlined max-w-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-w-[40px] group-hover:opacity-100 group-hover:mr-2">west</span>
+                    <span>Cody.Chiu</span>
+                </a>
+
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="block md:hidden">
+                    <span>Cody.Chiu</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-10">
+            <a class="nav-link text-secondary hover transition-colors" href="index.html#about">About</a>
+            <a class="nav-link text-secondary hover transition-colors" href="index.html#experience">Experience</a>
+            <a class="nav-link text-secondary hover transition-colors" href="index.html#stack">Stack</a>
+            <a class="nav-active text-primary" href="#">Portfolio</a>
+        </div>
+
+        <div class="flex items-center">
+            <button
+                class="primary-cta-gradient text-white px-5 py-2 rounded-full font-bold text-sm sm:text-base scale-95 active:scale-90 transition-transform duration-300 hover:brightness-120 hover:shadow-xl cursor-pointer"
+                onclick="window.location.href='mailto:lililala7766@gmail.com'">
+                Contact
+            </button>
+        </div>
     </nav>
+
+    <!-- portfolio menu -->
+    <div
+        class="hidden lg:flex flex-col items-start gap-4 z-70 fixed top-[40vh] p-4 glass-nav border border-l-0 border-2 border-primary text-md rounded-r-lg shadow-lg font-bold transition-transform duration-300 ease-in-out w-32 -translate-x-[80%] hover:translate-x-0">
+        <div
+            class="absolute right-0 top-1/2 -translate-y-1/2 h-full bg-primary text-white text-xs py-3 px-1 [writing-mode:vertical-lr] tracking-widest flex items-center justify-center">
+            JUMP
+        </div>
+
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
+            href="#interactive-games">Games</a>
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
+            href="#lottery-game-design">UI</a>
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap" href="#pet-e-commerce">Web</a>
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
+            href="#video-production">Video</a>
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
+            href="#exhibition-design">Exhibition</a>
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap" href="#print-design">Print</a>
+    </div>
+
+    <!-- menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 glass-nav backdrop-blur-xl z-[60] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500">
+        <div class="flex flex-col text-xl font-bold text-secondary w-auto">
+            <a class="nav-link mobile-link text-secondary p-5 pr-0" href="index.html">
+                <div class="material-symbols-outlined">arrow_back_ios</div>Back
+            </a>
+            <div class="flex flex-col gap-8 border-t pt-8 mx-5">
+                <a class="nav-link mobile-link text-secondary ml-5" href="#interactive-games">Games</a>
+                <a class="nav-link mobile-link text-secondary ml-5" href="#lottery-game-design">UI</a>
+                <a class="nav-link mobile-link text-secondary ml-5" href="#pet-e-commerce">Web</a>
+                <a class="nav-link mobile-link text-secondary ml-5" href="#video-production">Video</a>
+                <a class="nav-link mobile-link text-secondary ml-5" href="#exhibition-design">Exhibition</a>
+                <a class="nav-link mobile-link text-secondary ml-5" href="#print-design">Print</a>
+            </div>
+        </div>
+    </div>
 
     <main class="pt-32">
         <!-- Hero -->
-        <section class="px-12 mb-32 max-w-[1440px] mx-auto">
+        <section class="px-12 mb-32 max-w-[100rem] mx-auto">
             <div class="flex flex-col md:flex-row items-end justify-between gap-8">
                 <div class="max-w-3xl">
                     <h1
@@ -67,13 +116,15 @@
         </section>
 
         <!-- 01 Interactive Games -->
-        <section class="mb-56 px-12 max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
+        <section
+            class="mb-56 px-8 md:p-12 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
             id="interactive-games">
-            <div class="lg:w-[40%] lg:sticky lg:top-40">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
                     <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">01 / scratch
                         off</span>
-                    <h2 class="delay-100 fade-up text-6xl font-headline font-bold tracking-tight text-primary">
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
                         Interactive Games</h2>
                     <p class="delay-200 fade-up text-secondary text-lg leading-relaxed">Game interface design focused on
                         intuitive UI/UX and user flow.</p>
@@ -94,13 +145,15 @@
 
         <!-- 02 Game UI -->
         <section
-            class="mb-56 px-12 max-w-[1440px] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
+            class="mb-56 px-8 md:p-12 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
             id="lottery-game-design">
-            <div class="lg:w-[40%] lg:sticky lg:top-40">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
                     <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">02 / Lottery game
                         Design</span>
-                    <h2 class="delay-100 fade-up text-6xl font-headline font-bold tracking-tight text-primary">Game UI
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
+                        Game UI
                     </h2>
                     <p class="delay-200 fade-up text-secondary text-lg leading-relaxed">Professional game design
                         showcasing innovative UI/UX solutions</p>
@@ -130,13 +183,16 @@
         </section>
 
         <!-- 03 Web Design -->
-        <section class="mb-56 px-12 max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
+        <section
+            class="mb-56 px-8 md:p-12 max-w-[100rem] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
             id="pet-e-commerce">
-            <div class="lg:w-[40%] lg:sticky lg:top-40">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
                     <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">03 / Pet
                         e-commerce</span>
-                    <h2 class="delay-100 fade-up text-6xl font-headline font-bold tracking-tight text-primary">Web
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
+                        Web
                         Design</h2>
                     <p class="delay-200 fade-up text-secondary text-lg leading-relaxed">Commercial website with
                         integrated e-commerce platform</p>
@@ -162,19 +218,21 @@
 
         <!-- 04 Video Production -->
         <section
-            class="mb-56 px-12 max-w-[1440px] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
+            class="mb-56 px-8 md:p-12 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
             id="video-production">
-            <div class="lg:w-[40%] lg:sticky lg:top-40">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
                     <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">04 / Product
                         Video</span>
-                    <h2 class="delay-100 fade-up text-6xl font-headline font-bold tracking-tight text-primary">Video
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
+                        Video
                         Production</h2>
                     <p class="delay-200 fade-up text-secondary text-lg leading-relaxed">Product and commercial video
                         storytelling</p>
                 </div>
             </div>
-            <div class="lg:w-[60%] grid grid-cols-1 gap-16">
+            <div class="w-full lg:w-[60%] grid grid-cols-1 gap-16">
                 <div class="delay-200 fade-up">
                     <div class="aspect-video bg-surface-container-high rounded-xl overflow-hidden relative group">
                         <iframe src="https://www.youtube.com/embed/Yh-DpufGC5c"
@@ -195,19 +253,21 @@
         </section>
 
         <!-- 05 Exhibition Design -->
-        <section class="mb-56 px-12 max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
+        <section
+            class="mb-56 px-8 md:p-12 max-w-[100rem] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
             id="exhibition-design">
-            <div class="lg:w-[40%] lg:sticky lg:top-40">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
                     <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">05 / poster
                         Design</span>
-                    <h2 class="delay-100 fade-up text-6xl font-headline font-bold tracking-tight text-primary">
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
                         Exhibition Design</h2>
                     <p class="delay-200 fade-up text-secondary text-lg leading-relaxed mb-4">Trade show and exhibition
                         visual design</p>
                 </div>
             </div>
-            <div class="lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div class="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
                     class="delay-200 fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[16/9] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 transition-transform duration-1000"
@@ -232,12 +292,16 @@
         </section>
 
         <!-- 06 Print Design -->
-        <section class="mb-32 px-12 max-w-[1440px] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24" id="print-design">
-            <div class="lg:w-[40%] lg:sticky lg:top-40">
+        <section
+            class="mb-32 px-8 md:p-12 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
+            id="print-design">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
                     <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">06 / DM &amp; Other
                         Design</span>
-                    <h2 class="delay-100 fade-up text-6xl font-headline font-bold tracking-tight text-primary">Print
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
+                        Print
                         Design</h2>
                     <p class="delay-200 fade-up text-secondary text-lg leading-relaxed">Marketing materials and print
                         collateral</p>
@@ -274,11 +338,24 @@
     </main>
 
     <footer
-        class="bg-surface flex flex-col md:flex-row justify-between items-center p-8 w-full border-t border-[#3b494b]/15 font-body text-sm uppercase tracking-widest">
-        <div class="text-gray-500 mb-8 md:mb-0">© 2026 by Cody</div>
-        <div class="flex gap-8">
-            <a class="text-gray-500 hover underline-offset-4 transition-all duration-200"
-                href="mailto:lililala7766@gmail.com">Email</a>
+        class="bg-surface flex flex-col md:flex-row justify-between items-center p-8 w-full border-t border-black/15 font-body text-sm tracking-widest">
+        <div class="text-secondary mb-8 md:mb-0">© 2026 by Cody.Chiu</div>
+        <div class="flex items-center gap-2">
+            <a href="javascript:void(0)" id="copy-link"
+                class="group flex items-center gap-1 p-2 rounded-lg transition-all active:scale-95 cursor-pointer"
+                title="點擊複製 Email">
+
+                <span id="email-text"
+                    class="text-secondary transition-colors duration-300 group-hover:text-primary group-[.is-copied]:text-primary!">
+                    lililala7766@gmail.com
+                </span>
+
+                <span id="copy-icon"
+                    class="material-symbols-outlined text-secondary transition-colors duration-300 group-hover:text-primary group-[.is-copied]:text-primary!"
+                    data-weight="fill">
+                    content_copy
+                </span>
+            </a>
         </div>
     </footer>
 
@@ -298,7 +375,9 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, {
+            threshold: 0.1
+        });
 
         document.querySelectorAll('main > section:not(:first-child)').forEach(s => observer.observe(s));
     </script>
