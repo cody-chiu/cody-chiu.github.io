@@ -1488,11 +1488,6 @@
       border-bottom-color: color-mix(in srgb, var(--color-black, #000) 10%, transparent);
     }
   }
-  .md\:p-12 {
-    @media (width >= 48rem) {
-      padding: var(--spacing-12, 3rem);
-    }
-  }
   .md\:px-12 {
     @media (width >= 48rem) {
       padding-left: var(--spacing-12, 3rem);
@@ -1597,6 +1592,12 @@
     @media (width >= 64rem) {
       padding-left: var(--spacing-6, 1.5rem);
       padding-right: var(--spacing-6, 1.5rem);
+    }
+  }
+  .lg\:px-24 {
+    @media (width >= 64rem) {
+      padding-left: var(--spacing-24, 6rem);
+      padding-right: var(--spacing-24, 6rem);
     }
   }
   .lg\:text-6xl {
