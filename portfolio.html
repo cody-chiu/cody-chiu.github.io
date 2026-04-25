@@ -56,8 +56,8 @@
     </nav>
 
     <!-- portfolio menu -->
-    <div
-        class="hidden lg:flex flex-col items-start gap-4 z-70 fixed top-[40vh] p-4 glass-nav border border-l-0 border-2 border-primary text-md rounded-r-lg shadow-lg font-bold transition-transform duration-300 ease-in-out w-32 -translate-x-[80%] hover:translate-x-0">
+    <div id="side-nav" onclick="this.classList.toggle('is-active')"
+        class="hidden lg:flex flex-col items-start gap-4 z-70 fixed top-[40vh] p-4 glass-nav border border-l-0 border-2 border-primary text-md rounded-r-lg shadow-lg font-bold transition-transform duration-300 ease-in-out w-32 -translate-x-[80%] hover:translate-x-0 [&.is-active]:translate-x-0 cursor-pointer">
         <div
             class="absolute right-0 top-1/2 -translate-y-1/2 h-full bg-primary text-white text-xs py-3 px-1 [writing-mode:vertical-lr] tracking-widest flex items-center justify-center">
             JUMP
@@ -95,7 +95,7 @@
 
     <main class="pt-32">
         <!-- Hero -->
-        <section class="px-12 mb-32 max-w-[100rem] mx-auto">
+        <section class="px-6 md:px-12 mb-32 max-w-[100rem] mx-auto">
             <div class="flex flex-col md:flex-row items-end justify-between gap-8">
                 <div class="max-w-3xl">
                     <h1
@@ -131,13 +131,12 @@
                 </div>
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div
-                    class="delay-200 fade-up aspect-[1/2] group bg-surface-container-high rounded-xl overflow-hidden shadow-2xl">
-                    <img class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-1000"
-                        src="img/scratch-off-ui.png">
+                <div onclick="this.classList.toggle('is-active')"
+                    class="delay-200 fade-up aspect-[1/2] group rounded-xl overflow-hidden shadow-2xl cursor-pointer">
+                    <img class="w-full h-full object-cover object-top transition-all duration-500 ease-in-out group-hover:object-bottom 
+                        [.is-active_&]:object-bottom" src="img/scratch-off-ui.png">
                 </div>
-                <div
-                    class="delay-[350ms] fade-up aspect-[2/3] bg-surface-container-high rounded-xl overflow-hidden shadow-2xl sm:mt-24">
+                <div class="delay-[350ms] fade-up aspect-[2/3] rounded-xl overflow-hidden shadow-2xl sm:mt-24">
                     <img class="w-full h-full object-cover" src="img/scratch-off-win.gif" />
                 </div>
             </div>
@@ -162,20 +161,20 @@
             <div class="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8 md:mt-36">
                 <div
                     class="delay-200 fade-up group aspect-[9/19] rounded-xl overflow-hidden duration-300 shadow-2xl md:mt-36">
-                    <div class="bg-surface-container-high overflow-hidden">
+                    <div class="overflow-hidden">
                         <img class="w-full h-full object-cover" src="img/gameui-betslip.png" />
                     </div>
                 </div>
                 <div
                     class="delay-[350ms] fade-up group aspect-[1/2] rounded-xl overflow-hidden duration-300 shadow-2xl md:-mt-36">
-                    <div class="aspect-[1/2] bg-surface-container-high overflow-hidden">
+                    <div class="aspect-[1/2] overflow-hidden">
                         <img class="w-full h-full object-cover" src="img/gameui-main.png" />
                     </div>
                 </div>
                 <div class="group rounded-xl overflow-hidden duration-300 md:-mt-12"></div>
                 <div
                     class="delay-500 fade-up group aspect-[9/19] rounded-xl overflow-hidden duration-300 shadow-2xl md:-mt-80">
-                    <div class="bg-surface-container-high overflow-hidden">
+                    <div class="overflow-hidden">
                         <img class="w-full h-full object-cover" src="img/gameui-mybets.png" />
                     </div>
                 </div>
@@ -199,18 +198,19 @@
                 </div>
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div
-                    class="delay-200 fade-up md:col-span-2 group bg-surface-container-low rounded-xl overflow-hidden relative aspect-[16/9] shadow-2xl">
-                    <img class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-1000 ease-in-out"
-                        src="img/web-desktop.jpg" />
+                <div onclick="this.classList.toggle('is-active')"
+                    class="delay-200 fade-up md:col-span-2 aspect-[16/9] group rounded-xl overflow-hidden shadow-2xl cursor-pointer">
+                    <img class="w-full h-full object-cover object-top transition-all duration-1000 ease-in-out 
+                            group-hover:object-bottom 
+                            [.is-active_&]:object-bottom" src="img/web-desktop.jpg" />
                 </div>
-                <div
-                    class="delay-[350ms] fade-up group bg-surface-container-low rounded-xl overflow-hidden relative aspect-[9/19] shadow-2xl">
-                    <img class="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-[3s]"
-                        src="img/web-product.png" />
+                <div onclick="this.classList.toggle('is-active')"
+                    class="delay-[350ms] fade-up aspect-[9/19] group rounded-xl overflow-hidden shadow-2xl cursor-pointer">
+                    <img class="w-full h-full object-cover object-top transition-all duration-3000 ease-in-out 
+                                    group-hover:object-bottom 
+                                    [.is-active_&]:object-bottom" src="img/web-product.png" />
                 </div>
-                <div
-                    class="delay-500 fade-up group bg-surface-container-low rounded-xl overflow-hidden relative aspect-[9/19] shadow-2xl">
+                <div class="delay-500 fade-up group rounded-xl overflow-hidden relative aspect-[9/19] shadow-2xl">
                     <img class="w-full h-full object-cover object-bottom" src="img/web-login.png" />
                 </div>
             </div>
@@ -234,7 +234,7 @@
             </div>
             <div class="w-full lg:w-[60%] grid grid-cols-1 gap-16">
                 <div class="delay-200 fade-up">
-                    <div class="aspect-video bg-surface-container-high rounded-xl overflow-hidden relative group">
+                    <div class="aspect-video rounded-xl overflow-hidden relative group">
                         <iframe src="https://www.youtube.com/embed/Yh-DpufGC5c"
                             class="absolute inset-0 w-full h-full border-0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
@@ -242,7 +242,7 @@
                     </div>
                 </div>
                 <div class="delay-[400ms] fade-up">
-                    <div class="aspect-video bg-surface-container-high rounded-xl overflow-hidden relative group">
+                    <div class="aspect-video rounded-xl overflow-hidden relative group">
                         <iframe src="https://www.youtube.com/embed/EDlCgDH2-8A"
                             class="absolute inset-0 w-full h-full border-0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
@@ -269,22 +269,20 @@
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
-                    class="delay-200 fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[16/9] shadow-xl">
+                    class="delay-200 fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[16/9] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 transition-transform duration-1000"
                         src="img/adlink.jpg" />
                 </div>
                 <div
-                    class="delay-[350ms] fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[16/9] shadow-xl">
+                    class="delay-[350ms] fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[16/9] shadow-xl">
                     <img class="w-full h-full object-cover hover:scale-125 transition-transform duration-1000"
                         src="img/moxa.jpg" />
                 </div>
-                <div
-                    class="delay-500 fade-up aspect-[438/1024] bg-surface-container-high rounded-xl overflow-hidden shadow-xl">
+                <div class="delay-500 fade-up aspect-[438/1024] rounded-xl overflow-hidden shadow-xl">
                     <img class="w-full h-full object-cover hover:scale-125 transition-transform duration-1000"
                         src="img/poster1.jpg" />
                 </div>
-                <div
-                    class="delay-[650ms] fade-up aspect-[438/1024] bg-surface-container-high rounded-xl overflow-hidden shadow-xl">
+                <div class="delay-[650ms] fade-up aspect-[438/1024] rounded-xl overflow-hidden shadow-xl">
                     <img class="w-full h-full object-cover hover:scale-125 transition-transform duration-1000"
                         src="img/poster2.jpg" />
                 </div>
@@ -309,27 +307,27 @@
             </div>
             <div class="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
-                    class="delay-200 fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
+                    class="delay-200 fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 duration-1000 ease-in-out"
                         src="img/dm.jpg" />
                 </div>
                 <div
-                    class="delay-[350ms] fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
+                    class="delay-[350ms] fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 duration-1000 ease-in-out"
                         src="img/dm2.jpg" />
                 </div>
                 <div
-                    class="delay-[350ms] fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
+                    class="delay-[350ms] fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 duration-1000 ease-in-out"
                         src="img/dm3.jpg" />
                 </div>
                 <div
-                    class="delay-500 fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
+                    class="delay-500 fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 duration-1000 ease-in-out"
                         src="img/cd.jpg" />
                 </div>
                 <div
-                    class="delay-[650ms] fade-up md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
+                    class="delay-[650ms] fade-up md:col-span-2 rounded-xl overflow-hidden relative aspect-[10/6] shadow-xl">
                     <img class="w-full h-full object-cover object-top hover:scale-125 duration-1000 ease-in-out"
                         src="img/letter.jpg" />
                 </div>
