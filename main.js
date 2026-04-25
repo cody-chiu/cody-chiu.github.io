@@ -31,7 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const href = link.getAttribute('href');
             let id = href.includes('#') ? href.split('#').pop() : (href.endsWith('.html') ? href.replace('.html', '') : null);
             const element = id ? document.getElementById(id) : null;
-            return { id, element, link };
+            return {
+                id,
+                element,
+                link
+            };
         }).filter(item => item.element !== null);
 
         let activeId = null;
@@ -69,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 3. Copy Email 邏輯 (加入安全檢查) ---
     const copyBtn = document.getElementById('copy-link');
     if (copyBtn) {
-        copyBtn.addEventListener('click', function(e) {
+        copyBtn.addEventListener('click', function (e) {
             e.preventDefault();
             const email = "lililala7766@gmail.com";
             const text = document.getElementById('email-text');
@@ -86,4 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+});
+
+// 監聽全域點擊
+document.addEventListener('click', (e) => {
+    // 找出所有處於 active 狀態的卡片
+    const activeCards = document.querySelectorAll('.is-active');
+    activeCards.forEach(card => {
+        // 如果點擊的目標不是卡片本身，就移除 active 狀態
+        if (!card.contains(e.target)) {
+            card.classList.remove('is-active');
+        }
+    });
 });
