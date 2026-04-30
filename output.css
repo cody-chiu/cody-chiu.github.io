@@ -610,6 +610,9 @@
   .left-\[7px\] {
     left: 7px;
   }
+  .z-0 {
+    z-index: 0;
+  }
   .z-10 {
     z-index: 10;
   }
@@ -1755,6 +1758,21 @@
     &.is-active {
       --tw-translate-x: var(--spacing-0, 0px);
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .md\:\[\&\.is-active\]\:z-10 {
+    @media (width >= 48rem) {
+      &.is-active {
+        z-index: 10;
+      }
+    }
+  }
+  .md\:\[\&\.is-active\]\:translate-y-4 {
+    @media (width >= 48rem) {
+      &.is-active {
+        --tw-translate-y: var(--spacing-4, 1rem);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
     }
   }
   .\[\.is-active_\&\]\:object-bottom {

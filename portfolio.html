@@ -164,17 +164,17 @@
                 <div class="delay-200 fade-up relative md:mt-36 overflow-visible">
                     <div class="ba-slider peer relative z-20 w-full aspect-[9/19] rounded-xl overflow-hidden cursor-col-resize select-none shadow-2xl" data-before="img/gameui-betslip-before.jpg" data-after="img/gameui-betslip.png">
                         <img class="w-full h-full object-cover pointer-events-none" src="img/gameui-betslip.png" alt="After" draggable="false" />
-                        <div class="ba-before-wrap absolute inset-0 overflow-hidden" style="width:50%;">
+                        <span class="absolute top-3 right-3 z-0 bg-primary text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">After</span>
+                        <div class="ba-before-wrap absolute inset-0 overflow-hidden z-10" style="width:50%;">
                             <img class="ba-before-img absolute inset-0 h-full object-cover pointer-events-none" src="img/gameui-betslip-before.png" alt="Before" draggable="false" style="width:200%;" />
+                            <span class="absolute top-3 left-3 z-20 bg-black/40 text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
                         </div>
-                        <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg pointer-events-none z-10" style="left:50%;"></div>
-                        <div class="ba-handle absolute top-1/2 z-20 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary shadow-xl flex items-center justify-center pointer-events-none" style="left:50%;">
+                        <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg pointer-events-none z-20" style="left:50%;"></div>
+                        <div class="ba-handle absolute top-1/2 z-30 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary shadow-xl flex items-center justify-center pointer-events-none" style="left:50%;">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L2 10L7 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 4L18 10L13 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
-                        <span class="absolute top-3 left-3 z-10 bg-black/40 text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
-                        <span class="absolute top-3 right-3 z-10 bg-primary text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">After</span>
                     </div>
-                    <div class="relative md:absolute md:bottom-24 md:-left-12 z-30 md:peer-hover:z-10 md:peer-hover:translate-y-4 w-full md:w-[90%] bg-black/80 rounded-xl p-4 flex flex-col gap-2.5 shadow-2xl mt-4 md:mt-0 transition-all duration-500">
+                    <div onclick="this.classList.toggle('is-active')" class="relative md:absolute md:bottom-24 md:-left-12 z-30 md:peer-hover:z-10 md:peer-hover:translate-y-4 md:[&.is-active]:z-10 md:[&.is-active]:translate-y-4 w-full md:w-[90%] bg-black/80 rounded-xl p-4 flex flex-col gap-2.5 shadow-2xl mt-4 md:mt-0 transition-all duration-500 cursor-pointer">
                         <h3 class="font-headline font-bold text-white text-sm tracking-tight">Bet Slip</h3>
                         <ul class="flex flex-col gap-1.5">
                             <li class="flex gap-2 text-white/70 text-xs leading-relaxed"><span class="text-primary font-bold font-mono shrink-0">01</span>Revise chip design and add a mini keypad</li>
@@ -188,17 +188,17 @@
                 <div class="delay-[350ms] fade-up relative md:-mt-36 overflow-visible">
                     <div class="ba-slider peer relative z-20 w-full aspect-[9/19] rounded-xl overflow-hidden cursor-col-resize select-none shadow-2xl" data-before="img/gameui-main-before.jpg" data-after="img/gameui-main.png">
                         <img class="w-full h-full object-cover pointer-events-none" src="img/gameui-main.png" alt="After" draggable="false" />
-                        <div class="ba-before-wrap absolute inset-0 overflow-hidden" style="width:50%;">
+                        <span class="absolute top-3 right-3 z-0 bg-primary text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">After</span>
+                        <div class="ba-before-wrap absolute inset-0 overflow-hidden z-10" style="width:50%;">
                             <img class="ba-before-img absolute inset-0 h-full object-cover pointer-events-none" src="img/gameui-main-before.png" alt="Before" draggable="false" style="width:200%;" />
+                            <span class="absolute top-3 left-3 z-20 bg-black/40 text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
                         </div>
-                        <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg pointer-events-none z-10" style="left:50%;"></div>
-                        <div class="ba-handle absolute top-1/2 z-20 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary shadow-xl flex items-center justify-center pointer-events-none" style="left:50%;">
+                        <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg pointer-events-none z-20" style="left:50%;"></div>
+                        <div class="ba-handle absolute top-1/2 z-30 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary shadow-xl flex items-center justify-center pointer-events-none" style="left:50%;">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L2 10L7 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 4L18 10L13 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
-                        <span class="absolute top-3 left-3 z-10 bg-black/40 text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
-                        <span class="absolute top-3 right-3 z-10 bg-primary text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">After</span>
                     </div>
-                    <div class="relative md:absolute md:top-32 md:left-auto md:-right-40 z-30 md:peer-hover:z-10 md:peer-hover:translate-y-4 w-full md:w-[90%] bg-black/80 rounded-xl p-4 flex flex-col gap-2.5 shadow-2xl mt-4 md:mt-0 transition-all duration-500">
+                    <div onclick="this.classList.toggle('is-active')" class="relative md:absolute md:top-32 md:left-auto md:-right-40 z-30 md:peer-hover:z-10 md:peer-hover:translate-y-4 md:[&.is-active]:z-10 md:[&.is-active]:translate-y-4 w-full md:w-[90%] bg-black/80 rounded-xl p-4 flex flex-col gap-2.5 shadow-2xl mt-4 md:mt-0 transition-all duration-500 cursor-pointer">
                         <h3 class="font-headline font-bold text-white text-sm tracking-tight">Main</h3>
                         <ul class="flex flex-col gap-1.5">
                             <li class="flex gap-2 text-white/70 text-xs leading-relaxed"><span class="text-primary font-bold font-mono shrink-0">01</span>Redesign the bottom navigation bar: center the Bet Slip as the primary focus and add bet status indicators</li>
@@ -215,17 +215,17 @@
                 <div class="delay-500 fade-up relative md:-mt-72 overflow-visible">
                     <div class="ba-slider peer relative z-20 w-full aspect-[9/19] rounded-xl overflow-hidden cursor-col-resize select-none shadow-2xl" data-before="img/gameui-mybets-before.jpg" data-after="img/gameui-mybets.png">
                         <img class="w-full h-full object-cover pointer-events-none" src="img/gameui-mybets.png" alt="After" draggable="false" />
-                        <div class="ba-before-wrap absolute inset-0 overflow-hidden" style="width:50%;">
+                        <span class="absolute top-3 right-3 z-0 bg-primary text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">After</span>
+                        <div class="ba-before-wrap absolute inset-0 overflow-hidden z-10" style="width:50%;">
                             <img class="ba-before-img absolute inset-0 h-full object-cover pointer-events-none" src="img/gameui-mybets-before.png" alt="Before" draggable="false" style="width:200%;" />
+                            <span class="absolute top-3 left-3 z-20 bg-black/40 text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
                         </div>
-                        <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg pointer-events-none z-10" style="left:50%;"></div>
-                        <div class="ba-handle absolute top-1/2 z-20 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary shadow-xl flex items-center justify-center pointer-events-none" style="left:50%;">
+                        <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg pointer-events-none z-20" style="left:50%;"></div>
+                        <div class="ba-handle absolute top-1/2 z-30 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary shadow-xl flex items-center justify-center pointer-events-none" style="left:50%;">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L2 10L7 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 4L18 10L13 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
-                        <span class="absolute top-3 left-3 z-10 bg-black/40 text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
-                        <span class="absolute top-3 right-3 z-10 bg-primary text-white text-xs font-label uppercase tracking-widest px-2 py-1 rounded-md backdrop-blur-sm">After</span>
                     </div>
-                    <div class="relative md:absolute md:bottom-16 md:left-auto md:-right-40 z-30 md:peer-hover:z-10 md:peer-hover:translate-y-4 w-full md:w-[90%] bg-black/80 rounded-xl p-4 flex flex-col gap-2.5 shadow-2xl mt-4 md:mt-0 transition-all duration-500">
+                    <div onclick="this.classList.toggle('is-active')" class="relative md:absolute md:bottom-16 md:left-auto md:-right-40 z-30 md:peer-hover:z-10 md:peer-hover:translate-y-4 md:[&.is-active]:z-10 md:[&.is-active]:translate-y-4 w-full md:w-[90%] bg-black/80 rounded-xl p-4 flex flex-col gap-2.5 shadow-2xl mt-4 md:mt-0 transition-all duration-500 cursor-pointer">
                         <h3 class="font-headline font-bold text-white text-sm tracking-tight">My Bets</h3>
                         <ul class="flex flex-col gap-1.5">
                             <li class="flex gap-2 text-white/70 text-xs leading-relaxed"><span class="text-primary font-bold font-mono shrink-0">01</span>Consolidate Unsettled / Settled / Auto bets into one view</li>
