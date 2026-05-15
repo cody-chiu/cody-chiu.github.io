@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const sections = Array.from(navLinks).map(link => {
             const href = link.getAttribute('href');
             let id = href.includes('#') ? href.split('#').pop() : (href.endsWith('.html') ? href.replace('.html', '') : null);
+            if (href.includes('portfolio') && document.getElementById('portfolio')) {
+                id = 'portfolio';
+            }
             const element = id ? document.getElementById(id) : null;
             return {
                 id,
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('text-primary');
             link.classList.add('text-secondary');
 
-            if (activeId && (href.endsWith(`#${activeId}`) || href.includes(`${activeId}.html`))) {
+            if (activeId && (href.endsWith(`#${activeId}`) || href.includes(`${activeId}.html`) || (activeId === 'portfolio' && href.includes('portfolio')))) {
                 link.classList.add('text-primary');
                 link.classList.remove('text-secondary');
             }
@@ -69,8 +72,65 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateScroll);
     updateScroll();
 
+    // --- 3. GA4 Section Engagement Tracking ---
+    const analyticsSections = document.querySelectorAll('main > section[id]');
+    let activeSection = null;
+    let activeSectionStart = 0;
 
-    // --- 3. Copy Email 邏輯 (加入安全檢查) ---
+    function sendAnalyticsEvent(eventName, params) {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', eventName, params);
+    }
+
+    function getSectionLabel(section) {
+        const heading = section.querySelector('h1, h2, h3');
+        return heading ? heading.textContent.trim().replace(/\s+/g, ' ') : section.id;
+    }
+
+    function closeActiveSection() {
+        if (!activeSection || !activeSectionStart) return;
+        const engagementSeconds = Math.round((Date.now() - activeSectionStart) / 1000);
+        if (engagementSeconds >= 2) {
+            sendAnalyticsEvent('section_engagement', {
+                section_id: activeSection.id,
+                section_label: getSectionLabel(activeSection),
+                engagement_seconds: engagementSeconds,
+                page_path: window.location.pathname
+            });
+        }
+        activeSection = null;
+        activeSectionStart = 0;
+    }
+
+    if (analyticsSections.length > 0) {
+        const sectionObserver = new IntersectionObserver(entries => {
+            const visibleEntry = entries
+                .filter(entry => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+            if (!visibleEntry || visibleEntry.target === activeSection) return;
+
+            closeActiveSection();
+            activeSection = visibleEntry.target;
+            activeSectionStart = Date.now();
+            sendAnalyticsEvent('section_view', {
+                section_id: activeSection.id,
+                section_label: getSectionLabel(activeSection),
+                page_path: window.location.pathname
+            });
+        }, {
+            threshold: [0.5, 0.75]
+        });
+
+        analyticsSections.forEach(section => sectionObserver.observe(section));
+        window.addEventListener('pagehide', closeActiveSection);
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') closeActiveSection();
+        });
+    }
+
+
+    // --- 4. Copy Email 邏輯 (加入安全檢查) ---
     const copyBtn = document.getElementById('copy-link');
     if (copyBtn) {
         copyBtn.addEventListener('click', function (e) {
