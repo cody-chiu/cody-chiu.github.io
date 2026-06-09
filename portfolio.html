@@ -71,9 +71,9 @@
 
     <!-- portfolio menu -->
     <div id="side-nav" onclick="this.classList.toggle('is-active')"
-        class="hidden lg:flex flex-col items-start gap-4 z-70 fixed top-[40vh] p-4 glass-nav border border-l-0 border-2 border-primary text-md rounded-r-lg shadow-lg font-bold transition-transform duration-300 ease-in-out w-32 -translate-x-[80%] hover:translate-x-0 [&.is-active]:translate-x-0 cursor-pointer">
+        class="hidden lg:flex flex-col items-start gap-4 z-70 fixed right-0 top-[40vh] p-4 pl-12 glass-nav border border-r-0 border-2 border-primary text-md rounded-l-lg shadow-lg font-bold text-right transition-transform duration-300 ease-in-out w-36 translate-x-[82%] hover:translate-x-0 [&.is-active]:translate-x-0 cursor-pointer">
         <div
-            class="absolute right-0 top-1/2 -translate-y-1/2 h-full bg-primary text-white text-xs py-3 px-1 [writing-mode:vertical-lr] tracking-widest flex items-center justify-center">
+            class="absolute left-0 top-1/2 -translate-y-1/2 h-full bg-primary text-white text-xs py-3 px-1 [writing-mode:vertical-lr] tracking-widest flex items-center justify-center">
             JUMP
         </div>
 
@@ -81,6 +81,8 @@
             href="#interactive-games">Games</a>
         <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
             href="#lottery-game-design">UI</a>
+        <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
+            href="#ai-product-design">AI Product</a>
         <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap" href="#pet-e-commerce">Web</a>
         <a class="nav-link text-white hover transition-colors w-full whitespace-nowrap"
             href="#video-production">Video</a>
@@ -99,6 +101,7 @@
             <div class="flex flex-col gap-8 border-t pt-8 mx-5">
                 <a class="nav-link mobile-link text-secondary ml-5" href="#interactive-games">Games</a>
                 <a class="nav-link mobile-link text-secondary ml-5" href="#lottery-game-design">UI</a>
+                <a class="nav-link mobile-link text-secondary ml-5" href="#ai-product-design">AI Product</a>
                 <a class="nav-link mobile-link text-secondary ml-5" href="#pet-e-commerce">Web</a>
                 <a class="nav-link mobile-link text-secondary ml-5" href="#video-production">Video</a>
                 <a class="nav-link mobile-link text-secondary ml-5" href="#exhibition-design">Exhibition</a>
@@ -310,13 +313,43 @@
             </script>
         </section>
 
-        <!-- 03 Web Design -->
+        <!-- 03 AI Product Design -->
         <section
             class="mb-56 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
-            id="pet-e-commerce">
+            id="ai-product-design">
             <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
                 <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
-                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">03 / Pet
+                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">03 / Clothy</span>
+                    <h2
+                        class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
+                        AI Product Design</h2>
+                    <p class="delay-300 fade-up text-secondary text-lg leading-relaxed">AI-assisted wardrobe and outfit planning app</p>
+                    
+                    <div class="delay-[350ms] fade-up flex w-auto justify-start">
+                        <a class="rounded-full border border-prim   ary leading-none px-4 py-2 text-primary  cursor-pointer" href="https://clothy-self.vercel.app/v2" target="_blank">View Demo <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="delay-200 fade-up aspect-[9/16] group rounded-xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover object-top transition-all duration-500 ease-in-out group-hover:object-bottom
+                        [.is-active_&]:object-bottom" src="img/clothy-home.png">
+                </div>
+                <div class="delay-[350ms] fade-up aspect-[9/16] rounded-xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover" src="img/clothy-wardrobe.png" />
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 Web Design -->
+        <section
+            class="mb-56 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
+            id="pet-e-commerce">
+            <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
+                <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
+                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">04 / Pet
                         e-commerce</span>
                     <h2
                         class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
@@ -343,13 +376,13 @@
             </div>
         </section>
 
-        <!-- 04 Video Production -->
+        <!-- 05 Video Production -->
         <section
-            class="mb-56 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
+            class="mb-56 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
             id="video-production">
             <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
-                <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
-                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">04 / Product
+                <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
+                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">05 / Product
                         Video</span>
                     <h2
                         class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
@@ -379,13 +412,13 @@
             </div>
         </section>
 
-        <!-- 05 Exhibition Design -->
+        <!-- 06 Exhibition Design -->
         <section
-            class="mb-56 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
+            class="mb-56 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
             id="exhibition-design">
             <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
-                <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
-                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">05 / poster
+                <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
+                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">06 / poster
                         Design</span>
                     <h2
                         class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
@@ -416,13 +449,13 @@
             </div>
         </section>
 
-        <!-- 06 Print Design -->
+        <!-- 07 Print Design -->
         <section
-            class="mb-32 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row-reverse items-start gap-12 lg:gap-24"
+            class="mb-32 px-6 md:px-12 lg:px-24 max-w-[100rem] mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24"
             id="print-design">
             <div class="w-full lg:w-[40%] lg:sticky lg:top-40">
-                <div class="flex flex-col gap-6 border-r-4 border-primary pr-8 text-right">
-                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">06 / DM &amp; Other Design</span>
+                <div class="flex flex-col gap-6 border-l-4 border-primary pl-8">
+                    <span class="fade-up text-outline font-label text-sm uppercase tracking-widest">07 / DM &amp; Other Design</span>
                     <h2
                         class="delay-100 fade-up text-5xl lg:text-6xl font-headline font-bold tracking-tight text-primary">
                         Print
