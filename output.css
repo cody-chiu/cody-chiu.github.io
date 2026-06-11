@@ -604,9 +604,6 @@
   .left-3 {
     left: var(--spacing-3, 0.75rem);
   }
-  .left-4 {
-    left: var(--spacing-4, 1rem);
-  }
   .left-\[-10\%\] {
     left: -10%;
   }
@@ -792,9 +789,6 @@
   .w-12 {
     width: var(--spacing-12, 3rem);
   }
-  .w-32 {
-    width: var(--spacing-32, 8rem);
-  }
   .w-36 {
     width: var(--spacing-36, 9rem);
   }
@@ -851,56 +845,8 @@
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .translate-x-\[0\%\] {
-    --tw-translate-x: 0%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[1\%\] {
-    --tw-translate-x: 1%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[5\%\] {
-    --tw-translate-x: 5%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[10\%\] {
-    --tw-translate-x: 10%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[80\%\] {
-    --tw-translate-x: 80%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[81\%\] {
-    --tw-translate-x: 81%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .translate-x-\[82\%\] {
     --tw-translate-x: 82%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[83\%\] {
-    --tw-translate-x: 83%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[84\%\] {
-    --tw-translate-x: 84%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[85\%\] {
-    --tw-translate-x: 85%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[86\%\] {
-    --tw-translate-x: 86%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[100\%\] {
-    --tw-translate-x: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-x-\[calc\(100\%-1\.5rem\)\] {
-    --tw-translate-x: calc(100% - 1.5rem);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .scale-95 {
@@ -1079,6 +1025,9 @@
   .bg-white {
     background-color: var(--color-white, #fff);
   }
+  .bg-yellow-500\/50 {
+    background-color: color-mix(in srgb, var(--color-yellow-500, #eab308) 50%, transparent);
+  }
   .bg-gradient-to-t {
     --tw-gradient-position: to top,;
     background-image: linear-gradient(var(--tw-gradient-stops, to top));
@@ -1171,9 +1120,6 @@
   .pr-0 {
     padding-right: var(--spacing-0, 0px);
   }
-  .pr-4 {
-    padding-right: var(--spacing-4, 1rem);
-  }
   .pr-8 {
     padding-right: var(--spacing-8, 2rem);
   }
@@ -1185,9 +1131,6 @@
   }
   .pl-8 {
     padding-left: var(--spacing-8, 2rem);
-  }
-  .pl-10 {
-    padding-left: var(--spacing-10, 2.5rem);
   }
   .pl-12 {
     padding-left: var(--spacing-12, 3rem);
