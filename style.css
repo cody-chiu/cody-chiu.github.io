@@ -8,6 +8,11 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
 .white {
     /* Define colors for the 'white' theme */
     --color-outline: #849495;

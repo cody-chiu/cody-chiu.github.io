@@ -163,3 +163,13 @@ document.addEventListener('click', (e) => {
         }
     });
 });
+
+// Disable the context menu on images across all pages.
+document.addEventListener('contextmenu', (e) => {
+    if (e.target.closest('img')) e.preventDefault();
+});
+
+// Prevent native image dragging across all pages.
+document.addEventListener('dragstart', (e) => {
+    if (e.target.closest('img')) e.preventDefault();
+});
