@@ -327,28 +327,28 @@
             <div class="w-full xl:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="delay-200 fade-up md:col-span-2 relative aspect-[45/32] overflow-hidden rounded-xl shadow-xl">
                     <img class="absolute inset-0 h-full w-full object-cover object-top" id="clothy-image-en" src="img/clothy1-en.jpg" />
-                    <div class="absolute inset-x-0 bottom-0 flex justify-end p-4">
-                        <button class="border bg-[#73402A] text-white px-4 py-1 rounded-full font-bold text-xs sm:text-base hover:scale-110 active:scale-90 transition-transform duration-300 cursor-pointer shadow-lg"
+                    <div class="absolute inset-0 flex items-end justify-end p-4">
+                        <button aria-label="Show more Clothy designs" class="group h-full w-full flex items-end justify-end cursor-pointer"
                             onclick="const image = document.getElementById('clothy-image-en'); image.src = image.src.endsWith('clothy1-en.jpg') ? 'img/clothy2-en.jpg' : 'img/clothy1-en.jpg'">
-                            More
+                            <span class="border bg-[#73402A] text-white px-4 py-1 rounded-full font-bold text-xs sm:text-base group-hover:scale-110 group-active:scale-90 transition-transform duration-300 shadow-lg">More</span>
                         </button>
                     </div>
                 </div>
                 <div class="delay-400 fade-up md:col-span-2 relative aspect-[45/32] overflow-hidden rounded-xl shadow-xl">
                     <img class="absolute inset-0 h-full w-full object-cover object-top" id="lottery-image-en" data-index="1" src="img/lottery1-en.jpg" />
-                    <div class="absolute inset-x-0 bottom-0 flex justify-end p-4">
-                        <button class="border bg-[#1F3E7A] text-white px-4 py-1 rounded-full font-bold text-xs sm:text-base hover:scale-110 active:scale-90 transition-transform duration-300 cursor-pointer shadow-lg"
+                    <div class="absolute inset-0 flex items-end justify-end p-4">
+                        <button aria-label="Show more lottery designs" class="group h-full w-full flex items-end justify-end cursor-pointer"
                             onclick="const image = document.getElementById('lottery-image-en'); const next = Number(image.dataset.index) % 4 + 1; image.dataset.index = next; image.src = 'img/lottery' + next + '-en.jpg'">
-                            More
+                            <span class="border bg-[#1F3E7A] text-white px-4 py-1 rounded-full font-bold text-xs sm:text-base group-hover:scale-110 group-active:scale-90 transition-transform duration-300 shadow-lg">More</span>
                         </button>
                     </div>
                 </div>
                 <div class="delay-600 fade-up md:col-span-2 relative aspect-[45/32] overflow-hidden rounded-xl shadow-xl">
                     <img class="absolute inset-0 h-full w-full object-cover object-top" id="pet-image-en" data-index="1" src="img/pet1-en.jpg" />
-                    <div class="absolute inset-x-0 bottom-0 flex justify-end p-4">
-                        <button class="border bg-[#24A0A2] text-white px-4 py-1 rounded-full font-bold text-xs sm:text-base hover:scale-110 active:scale-90 transition-transform duration-300 cursor-pointer shadow-lg"
+                    <div class="absolute inset-0 flex items-end justify-end p-4">
+                        <button aria-label="Show more pet designs" class="group h-full w-full flex items-end justify-end cursor-pointer"
                             onclick="const image = document.getElementById('pet-image-en'); const next = Number(image.dataset.index) % 3 + 1; image.dataset.index = next; image.src = 'img/pet' + next + '-en.jpg'">
-                            More
+                            <span class="border bg-[#24A0A2] text-white px-4 py-1 rounded-full font-bold text-xs sm:text-base group-hover:scale-110 group-active:scale-90 transition-transform duration-300 shadow-lg">More</span>
                         </button>
                     </div>
                 </div>

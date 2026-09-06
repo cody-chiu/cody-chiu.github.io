@@ -559,10 +559,6 @@
   .inset-0 {
     inset: var(--spacing-0, 0px);
   }
-  .inset-x-0 {
-    right: var(--spacing-0, 0px);
-    left: var(--spacing-0, 0px);
-  }
   .top-0 {
     top: var(--spacing-0, 0px);
   }
@@ -1447,6 +1443,14 @@
       @media (hover: hover) {
         clip-path: inset(0 0 0% 0% round 40px);
       }
+    }
+  }
+  .group-active\:scale-90 {
+    &:is(:where(.group):active *) {
+      --tw-scale-x: 90%;
+      --tw-scale-y: 90%;
+      --tw-scale-z: 90%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
   .hover\:translate-x-0 {
