@@ -1,6 +1,35 @@
 // 確保 DOM 載入後才執行
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- 0. Top Navigation Scroll Hide / Show ---
+    const topNav = document.querySelector('nav');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateNavVisibility() {
+        if (!topNav) return;
+
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+            topNav.classList.add('nav-hidden');
+        } else {
+            topNav.classList.remove('nav-hidden');
+        }
+
+        lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateNavVisibility();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
     // --- 1. Mobile Menu 邏輯 ---
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
